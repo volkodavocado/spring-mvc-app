@@ -7,7 +7,7 @@
 <body>
 <h1>Список пользователей</h1>
 <hr>
-<a href="/new">Добавить пользователя</a>
+<a href="/spring-mvc-app/new">Добавить пользователя</a>
 <hr>
 <table th:border="3" th:cellpadding="5">
     <tr>
@@ -19,10 +19,10 @@
         <td th:text="${user.name}">Имя</td>
         <td th:text="${user.email}">Почта</td>
         <td>
-            <form th:method="POST" th:action="@{/delete(id=${user.id})}" style="display:inline">
+            <form th:method="POST" th:action="@{/spring-mvc-app/delete?id={id}(id=${user.id})}" style="display:inline">
                 <input type="submit" value="Удалить">
             </form>
-            <a th:href="@{/edit?id={id}(id=${user.id})}">
+            <a th:href="@{/spring-mvc-app/edit?id={id}(id=${user.id})}">
                 <button>Изменить</button>
             </a>
         </td>

@@ -2,10 +2,10 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Изменение пользователя</title>
+    <title>Добавление пользователя</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/edit?id={id}(id=${user.id})}" th:object="${user}">
+<form th:method="POST" th:action="@{/spring-mvc-app/new}" th:object="${user}">
     <table th:border="0" th:cellpadding="3">
         <tr>
             <td>Имя:</td>
@@ -17,7 +17,7 @@
         </tr>
     </table>
     <br/>
-    <input type="submit" value="Изменить">
+    <input type="submit" value="Добавить">
 </form>
 </body>
 </html>
