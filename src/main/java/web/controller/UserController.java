@@ -8,7 +8,6 @@ import web.model.User;
 import web.service.UserService;
 
 @Controller
-@RequestMapping("/spring-mvc-app")
 public class UserController {
     private final UserService service;
 
@@ -31,13 +30,13 @@ public class UserController {
     @PostMapping("/new")
     public String add(@ModelAttribute("user") User user) {
         service.save(user);
-        return "redirect:/spring-mvc-app";
+        return "redirect:/";
     }
 
     @PostMapping("/delete")
     public String remove(@RequestParam("id") long id) {
         service.removeById(id);
-        return "redirect:/spring-mvc-app";
+        return "redirect:/";
     }
 
     @GetMapping("/edit")
@@ -49,6 +48,6 @@ public class UserController {
     @PostMapping("/edit")
     public String edit(@ModelAttribute("user") User user, @RequestParam("id") long id) {
         service.update(user, id);
-        return "redirect:/spring-mvc-app";
+        return "redirect:/";
     }
 }

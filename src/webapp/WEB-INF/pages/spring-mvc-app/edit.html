@@ -5,7 +5,7 @@
     <title>Изменение пользователя</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/spring-mvc-app/edit?id={id}(id=${user.id})}" th:object="${user}">
+<form th:method="POST" th:action="@{/edit?id={id}(id=${user.id})}" th:object="${user}">
     <table th:border="0" th:cellpadding="3">
         <tr>
             <td>Имя:</td>
